@@ -35,5 +35,7 @@ meaning they are ready to be committed
 
 git commit -m "initial commit"  -> here the changes are are committed for the staged files this is called **committing area**
 
--m -> message should be concise short and meaningful to reflect the updates happened on the files in staging area 
+-m -> 
 
+git log -> shows all versions of the directory i.e all commits done on it 
+--name-only 
