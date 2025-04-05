@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "2f2eb7fd0629af3b",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbfb7e2fc874aa46",
+        "type": "tabs",
+        "dimension": 58.06709265175719,
+        "children": [
+          {
+            "id": "73a68d9f108f90e7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Books/GitHub 1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "GitHub 1"
+            }
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "4d03043c89821b50",
+        "type": "tabs",
+        "dimension": 41.93290734824281,
+        "children": [
+          {
+            "id": "d45e9e381dfa5f6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "->GIT<-.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "->GIT<-"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8889db20fc369601",
+    "type": "split",
+    "children": [
+      {
+        "id": "be7d433d9ccad88f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f618071915155f0c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "44e434ab4a418085",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3735223db0cca454",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 455.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "cc1dcd950711e54b",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5d55f76778c63f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f16e2d883f97304",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DevOps/Dockers commands.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Dockers commands"
+            }
+          },
+          {
+            "id": "cef2df94087f9ea6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DevOps/Dockers commands.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Dockers commands"
+            }
+          },
+          {
+            "id": "0e412a4d89e955ed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7149610158a16faf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "->GIT<-.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of ->GIT<-"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 243.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "smart-gantt:Smart Gantt": false
+    }
+  },
+  "active": "d45e9e381dfa5f6e",
+  "lastOpenFiles": [
+    "Books/GitHub 1.pdf",
+    "->GIT<-.md",
+    "Books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf",
+    "Books/GitHub.pdf",
+    "Attachments/Screenshot from 2025-03-04 10-45-46 2.png",
+    "Attachments/alooo.md",
+    "copy cp command.md",
+    "remove file and directories rm.md",
+    "Remove command rm.md",
+    "Basic Command For Linux Terminal.md",
+    "mv.md",
+    "->Linux<-.md",
+    "uniq command.md",
+    "bash scripting.md",
+    "Bash Manual page Reviewing.md",
+    "identifying errors.md",
+    "shell initialization.md",
+    "The Linux Filesystem.md",
+    "Redirection of stdout.md",
+    "Concatenate command.md",
+    "uniq comman.md",
+    "ls command.md",
+    "Linux Boot.md",
+    "->Docker<-.md",
+    "Redirection of stdin.md",
+    "Man and info page.md",
+    "Identifying Commands.md",
+    "mkdir command.md",
+    "Pipelines.md",
+    "Attachments/Screenshot from 2025-03-04 10-45-46 4.png",
+    "Attachments/Screenshot from 2025-03-04 10-45-46 3.png",
+    "Attachments/Screenshot from 2025-03-04 10-45-46 1.png",
+    "Attachments/Pasted image 20250222101048.png",
+    "Attachments/Screenshot from 2025-03-04 10-45-46.png",
+    "DevOps",
+    "Attachments/Screenshot from 2025-02-22 13-33-38 1.png",
+    "Attachments/Screenshot from 2025-02-22 13-33-38.png",
+    "Attachments/Pasted image 20250222125845.png",
+    "Attachments/Screenshot from 2025-02-22 10-50-24 1.png",
+    "Books",
+    "Linux",
+    "Attachments"
+  ]
+}
