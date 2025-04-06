@@ -4,32 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cbfb7e2fc874aa46",
+        "id": "046694fc831f98de",
         "type": "tabs",
-        "dimension": 58.06709265175719,
         "children": [
           {
-            "id": "73a68d9f108f90e7",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Books/GitHub 1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "GitHub 1"
-            }
-          }
-        ],
-        "stacked": true
-      },
-      {
-        "id": "4d03043c89821b50",
-        "type": "tabs",
-        "dimension": 41.93290734824281,
-        "children": [
-          {
-            "id": "d45e9e381dfa5f6e",
+            "id": "31f5b7a23c3d1acd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -42,8 +21,7 @@
               "title": "->GIT<-"
             }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "->GIT<-.md",
+                "file": "Books/GitHub 1.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ->GIT<-"
+              "title": "Outline of GitHub 1"
             }
           }
         ],
@@ -193,37 +171,38 @@
       "smart-gantt:Smart Gantt": false
     }
   },
-  "active": "d45e9e381dfa5f6e",
+  "active": "31f5b7a23c3d1acd",
   "lastOpenFiles": [
-    "Books/GitHub 1.pdf",
+    "HEAD^ and HEAD~ in git.md",
     "->GIT<-.md",
+    "lists.md",
+    "python sequence unpacking.md",
+    "->Python<-.md",
+    "python functions.md",
+    "Python strings.md",
+    "python data structures.md",
+    "python data model.md",
+    "Python arithmetic Operations.md",
+    "python scoping.md",
+    "Python conditions.md",
+    "python can create virtual environment.md",
+    "Dictionaries.md",
+    "python loops.md",
+    "->Linux<-.md",
+    "tuples.md",
+    "notes on the language.md",
+    "sets.md",
+    "pip.md",
+    "Basic Command For Linux Terminal.md",
+    "Links.md",
+    "Bash Manual page Reviewing.md",
+    "Books/GitHub 1.pdf",
+    "->Docker<-.md",
+    "Books/GitHub.pdf.md",
     "Books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf",
     "Books/GitHub.pdf",
     "Attachments/Screenshot from 2025-03-04 10-45-46 2.png",
     "Attachments/alooo.md",
-    "copy cp command.md",
-    "remove file and directories rm.md",
-    "Remove command rm.md",
-    "Basic Command For Linux Terminal.md",
-    "mv.md",
-    "->Linux<-.md",
-    "uniq command.md",
-    "bash scripting.md",
-    "Bash Manual page Reviewing.md",
-    "identifying errors.md",
-    "shell initialization.md",
-    "The Linux Filesystem.md",
-    "Redirection of stdout.md",
-    "Concatenate command.md",
-    "uniq comman.md",
-    "ls command.md",
-    "Linux Boot.md",
-    "->Docker<-.md",
-    "Redirection of stdin.md",
-    "Man and info page.md",
-    "Identifying Commands.md",
-    "mkdir command.md",
-    "Pipelines.md",
     "Attachments/Screenshot from 2025-03-04 10-45-46 4.png",
     "Attachments/Screenshot from 2025-03-04 10-45-46 3.png",
     "Attachments/Screenshot from 2025-03-04 10-45-46 1.png",
