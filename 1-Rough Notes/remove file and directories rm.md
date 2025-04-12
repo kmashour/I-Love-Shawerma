@@ -5,4 +5,4 @@ shown here:
 rm item...
 ```
 where item is one or more files or directories.
-![[../Attachments/Screenshot from 2025-02-22 10-50-24 1.png]]
+![[6-Attachments/Screenshot from 2025-02-22 10-50-24 1.png]]

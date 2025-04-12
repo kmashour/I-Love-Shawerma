@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "046694fc831f98de",
+        "id": "39b39798cea61b9e",
         "type": "tabs",
         "children": [
           {
-            "id": "31f5b7a23c3d1acd",
+            "id": "c6eb488f4956a5ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "->GIT<-.md",
+                "file": "2-Inbox/Dockers 9-4-2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "->GIT<-"
+              "title": "Dockers 9-4-2025"
             }
           }
         ]
@@ -151,13 +151,23 @@
               "icon": "lucide-list",
               "title": "Outline of GitHub 1"
             }
+          },
+          {
+            "id": "dd855a6e96515b99",
+            "type": "leaf",
+            "state": {
+              "type": "smart-gantt",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 243.5,
+    "width": 428.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -171,50 +181,53 @@
       "smart-gantt:Smart Gantt": false
     }
   },
-  "active": "31f5b7a23c3d1acd",
+  "active": "c6eb488f4956a5ed",
   "lastOpenFiles": [
-    "HEAD^ and HEAD~ in git.md",
-    "->GIT<-.md",
-    "lists.md",
-    "python sequence unpacking.md",
+    "7-References/Code/CICD pipeline/Docker+CI.html",
+    "7-References/Code/CICD pipeline",
+    "1-Rough Notes/Dockers.md",
+    "1-Rough Notes/->Docker<-.md",
+    "1-Rough Notes/Bash Manual page Reviewing.md",
+    "1-Rough Notes/bash scripting.md",
+    "1-Rough Notes/->Linux<-.md",
+    "2-Inbox/Dockers 9-4-2025.md",
+    "1-Rough Notes/Dockers commands.md",
+    "1-Rough Notes/->GIT<-.md",
+    "2-Inbox/Untitled.md",
+    "7-References/Code/staticwebsite/page2.html",
+    "7-References/Code/staticwebsite/page1.html",
+    "7-References/Code/staticwebsite/index.html",
+    "7-References/Code/staticwebsite",
+    "7-References/Code",
+    "7-References/books",
+    "x-Template",
+    "1-Rough Notes",
+    "2-Projects",
+    "Inbox.md",
     "->Python<-.md",
-    "python functions.md",
-    "Python strings.md",
-    "python data structures.md",
-    "python data model.md",
-    "Python arithmetic Operations.md",
-    "python scoping.md",
-    "Python conditions.md",
-    "python can create virtual environment.md",
-    "Dictionaries.md",
-    "python loops.md",
+    "Branching.md",
+    "->GIT<-.md",
+    "The Linux Filesystem.md",
     "->Linux<-.md",
-    "tuples.md",
-    "notes on the language.md",
-    "sets.md",
-    "pip.md",
+    "->Docker<-.md",
     "Basic Command For Linux Terminal.md",
     "Links.md",
-    "Bash Manual page Reviewing.md",
-    "Books/GitHub 1.pdf",
-    "->Docker<-.md",
-    "Books/GitHub.pdf.md",
-    "Books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf",
-    "Books/GitHub.pdf",
-    "Attachments/Screenshot from 2025-03-04 10-45-46 2.png",
-    "Attachments/alooo.md",
-    "Attachments/Screenshot from 2025-03-04 10-45-46 4.png",
-    "Attachments/Screenshot from 2025-03-04 10-45-46 3.png",
-    "Attachments/Screenshot from 2025-03-04 10-45-46 1.png",
-    "Attachments/Pasted image 20250222101048.png",
-    "Attachments/Screenshot from 2025-03-04 10-45-46.png",
-    "DevOps",
-    "Attachments/Screenshot from 2025-02-22 13-33-38 1.png",
-    "Attachments/Screenshot from 2025-02-22 13-33-38.png",
-    "Attachments/Pasted image 20250222125845.png",
-    "Attachments/Screenshot from 2025-02-22 10-50-24 1.png",
-    "Books",
-    "Linux",
-    "Attachments"
+    "->Agile fundamentals<-.md",
+    "hashing.md",
+    "python data structures.md",
+    "Dictionaries.md",
+    "lists.md",
+    "Python conditions.md",
+    "python sequence unpacking.md",
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46 2.png",
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46 4.png",
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46 3.png",
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46 1.png",
+    "6-Attachments/Pasted image 20250222101048.png",
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46.png",
+    "6-Attachments/Screenshot from 2025-02-22 13-33-38 1.png",
+    "6-Attachments/Screenshot from 2025-02-22 13-33-38.png",
+    "6-Attachments/Pasted image 20250222125845.png",
+    "6-Attachments/Screenshot from 2025-02-22 10-50-24 1.png"
   ]
 }

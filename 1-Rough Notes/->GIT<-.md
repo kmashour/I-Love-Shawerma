@@ -1,6 +1,7 @@
 
 [[Books/GitHub.pdf|GitHub]]
 [[HEAD^ and HEAD~ in git]]
+[[Branching]]
 
 git manual page
 git help config 
@@ -81,9 +82,10 @@ git log -> shows all versions of the directory i.e all commits done on it
 --name-only 
 --oneline
 it also shows all commits hash ID every commit has a specific HASH ID that refers to it 
+**git log --graph --decorate** --> see previous commit history along with the branch they were committed on.
 
 
-git checkout hash_ID    -> head points to another commit on the master branch in this case using **git status** it shows something called head detached at *some hash id probably will be of the first master branch commit* in this detached mode Iam not on any branch up in the air 
+git checkout hash_ID    -> head points to another commit on the master branch in this case using **git status** it shows something called head detached at *some hash id probably will be of the first master branch commit* in this detached mode Iam not on any branch I'm up in the air 
 
 
 

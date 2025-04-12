@@ -1,5 +1,5 @@
 
-[[../Books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf|The Linux Command Line_ A Complete Introduction ( PDFDrive )]] #LinuxCommandBook1 
+[[../7-References/books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf|The Linux Command Line_ A Complete Introduction ( PDFDrive )]] #LinuxCommandBook1 
 
 What Exactly Are Commands?
 A command can be one of four different things.

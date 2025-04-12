@@ -76,7 +76,7 @@ When thinking about hard links, it is helpful to imagine that files are made up 
 
 When we **create** hard links, we are actually creating additional name parts** that all refer to the same data part. **The system assigns a chain of disk blocks to what is called an inode**, **which is then associated with the name part**. Each hard link therefore refers to a specific inode(**only one inode for a file and all hard links points to it)** containing the file’s contents
 
-![[../Attachments/Pasted image 20250222125845.png]]
+![[6-Attachments/Pasted image 20250222125845.png]]
 
 
 

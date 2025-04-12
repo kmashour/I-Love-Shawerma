@@ -16,7 +16,7 @@ Without specifying a section number, we will always get the first instance of a 
 man section search_term
 man 5 passwd
 ```
-![[../Attachments/Screenshot from 2025-02-22 13-33-38 1.png]]
+![[6-Attachments/Screenshot from 2025-02-22 13-33-38 1.png]]
 
  **apropos**—Display Appropriate Commands
 It is also possible to search the list of man pages for possible matches based on a search term. It’s crude but sometimes helpful.

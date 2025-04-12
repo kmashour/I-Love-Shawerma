@@ -3,10 +3,10 @@ Before we begin using our commands, we need to talk about a shell feature
 that makes these commands so powerful. Because the shell uses filenames
 so much, it provides special characters to help you rapidly specify groups
 of filenames. These special characters are called **wildcards**.
-![[../Attachments/Screenshot from 2025-02-22 10-31-23.png]]
+![[6-Attachments/Screenshot from 2025-02-22 10-31-23.png]]
 
 
-![[../Attachments/Screenshot from 2025-02-22 10-32-04 1.png]]
+![[6-Attachments/Screenshot from 2025-02-22 10-32-04 1.png]]
     Range wild card touch file{ 1...3}.txt
 
 
