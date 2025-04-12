@@ -1,0 +1,16 @@
+git add . 
+echo " choose type of commit "
+echo " Routine commit (1) "
+echo " System modification commit (2) "
+read x 
+if [ $x -eq 1 ] 
+then 
+	git commit -m "routine commit"
+	echo "commit is done"
+else
+	echo " Enter your commit message "
+	git commit 
+	
+fi
+
+git push git@github.com:kmashour/I-Love-Shawerma.git

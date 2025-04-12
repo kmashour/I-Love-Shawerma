@@ -474,7 +474,7 @@ getting-started-app
 cd getting-started-app
 vim Dockerfile
 
-**FROM node:18-alpine** --> constant updates and security patches, maintenance headache are not mine to worry about so if there is a base image with my needed runtime (in our case nodejs)  available please use it and reinvent the wheel 
+**FROM node:18-alpine** --> constant updates and security patches, maintenance headache are not mine to worry about so if there is a base image with my needed runtime (in our case nodejs)  available please use it and reinvent the wheel, From is also used to determine the base image Iam going to build my image on 
 
 **WORKDIR /app** --> mdkir /app ; cd /app 
 
@@ -708,5 +708,186 @@ Saas
 
 ##########################video-16##############################
 
+docker compose used to host docker container without the need for docker run or port forwarding just as we did in AWS beanstalk 
+
+We will something similar to PaaS we will multiple docker container locally without needing to connect them or even use docker run through whats called docker compose 
+
+Its (docker compose) a pool written in python to deal with micro-service application
+
+the problem is how will the container communicate internally for micro-services like database and how and which containers will be able to communicate with the outside world, Docker compose can handle all of that through making networks volumes all is configured through yml file and docker compose will run it, its not exactly a Paas like beanstalk but very similar to it so we can do all of the above without writing even one docker command.... 
+
+We will work on a Microservice weather application 
+Authentication service (GO) --> so the user needs login  
+Database used (MySQL) --> we can use any SQL Database 
+UI service --> html and CSS 
+weather service --> retrieve the weather data using 
+OPEN-weather API
+
+Imagine making a VM for each service total shit show !! .
+
+Multi-stage build is used in Go docker file and the reason for that is to minimize my image size and that what makes me Batman of Docker 
+
+Multi-stage docker: Best practices 
+from is what defines the base image 
+we use **from** twice, Go is a compiled language so we take the binary which is the output of the build from the first container and **just add the artifact** to the **2nd image** so the 1st image is just a buffer for building so we were able to discard all the build tools that would have been only used once, thats the 1st catch and the 2nd is security wise is better since less tools less vulnerabilities  
+
+
+docker compose is a python application so can use 
+pip 
+apt 
+yum 
+brew 
+
+vim docker-compose.yml --> default name use by docker compose
+
+docker compose will deal with the container as a service .. 
+
+
+![[../../4-References/Code/docker-compose/Docker+compose.html]]
+
+```html
+Clone the weather app from GitLab:
+
+git clone https://gitlab.com/abohmeed/moderndevops-weatherapp.git
+
+Install docker-compose:
+
+brew install docker-compose
+
+Create the `docker-compose.yaml` file as follows:
+
+services:
+
+  auth:
+
+    restart: always  --> optional, here it states on undefined action  
+     do an automatic restart		
+
+    build: ./auth   
+
+    depends_on:
+
+      - db
+
+    environment: 
+
+      DB_HOST: db
+
+      DB_USER: root
+
+      DB_PASSWORD: my-secret-pw
+
+      DB_NAME: authdb
+
+    networks:
+
+      - app-net -> bridge network so container could commincate by name which is the service name 
+
+  ui:
+
+    restart: always
+
+    build: ./UI
+
+    depends_on:
+
+      - auth
+
+      - weather
+
+    environment:
+
+      AUTH_HOST: auth
+
+      AUTH_PORT: 8080
+
+      WEATHER_HOST: weather
+
+      WEATHER_PORT: 5000
+
+    ports:
+
+      - "3000:3000"
+
+    networks:
+
+      - app-net
+
+  weather:
+
+    restart: always
+
+    build: ./weather
+
+    environment:
+
+      APIKEY: 6d92c50bdamsh81137f3b87ace1fp1d53eejsnfe818b9dbc83
+
+    networks:
+
+      - app-net
+
+  db:
+
+    restart: always
+
+    image: mysql:8.0.25
+
+    environment:
+
+      MYSQL_ROOT_PASSWORD: my-secret-pw --> when database starts for the first time it must be configured with a password
+
+      MYSQL_DATABASE: authdb
+
+    networks:
+
+      - app-net
+
+    volumes:
+
+      - ./db-data:/var/lib/mysql
+
+networks:
+
+  app-net:
+
+    driver: bridge
+
+volumes:
+
+  db-data:
+
+Run the file:
+
+docker-compose up -d  --> -d in detach mode if its in foreground the terminal will be flooded with logs of the yml command execution by default as we said the docker-compase looks for a file called 
+------- docker-compose.yml ---------- in the project working directory
+running this command more than once is completely fine if a service is already up its just passes to the next step in the build
+
+docker logs --> to print the logs if there is a problem or if a container fails sometime port mapping could cause a problem when conflicts happens to multiple containers listening on the same mapped port
+
+Show the status
+
+docker-compose ps
+
+Bring the application down:
+
+docker-compose down --> delete and removes everything the docker-compose created
+```
+
+security best practice in docker compose 
+is to put the authentication which user names and passwords and api keys in environment variables instead of plain text so instead of exporting every environment variable we can create
+
+vim .env --> docker compose recognize this file when created within the the project directory this file is added to .gitignore 
+
+![[../../Attachments/Screenshot from 2025-04-13 00-37-38.png]]
+
+![[../../Attachments/Screenshot from 2025-04-13 00-38-19.png]]
+
+
+
+
+
+how does docker compose build the yml file is it sequential i don't think so why is that ??? 
+because we used and stated the network and volumes that where defined at the end of the file so it must have another approach ??????????
 
 

@@ -83,4 +83,8 @@ But if the package has **dependencies**, they must also be installed manually un
 ✅ **Downloaded packages are temporarily cached in system directories.**  
 ✅ **Offline installation is possible if dependencies are also available.**
 
-Would you like to see how to create a custom local repository? 😊
+
+
+-----------------
+
+https://linuxiac.com/nala-apt-command-frontend/
