@@ -1,6 +1,6 @@
 
 docker info
-# server component should reply the server component is docker daemon "the docker API which receive the docker commands to execute it"
+server component should reply , the server component is docker daemon "the docker API which receive the docker commands to execute it"
 
 client / server must reply 
 
@@ -27,7 +27,8 @@ client / server must reply
 
 stop lel container once existed but why ?? 
 Another very important concept 
-the main target of a container is to run only 1 process once the process is terminated the container is considered obsolete its a bundle of packages and dependencies that run together live together terminate together 
+
+**the main target of a container is to run only 1 process once the process is terminated the container is considered obsolete its a bundle of packages and dependencies that run together live together terminate together** 
 
 
 the container = application 
@@ -52,7 +53,11 @@ docker contain ls -a
 ==docker container run -it python /bin/bash== 
 run python container with the bash command not python 3
 
-now python3 is sub process from parent process which is bash so by exiting we return to bash since we didn't exit the parent process 
+now python3 is sub process from parent process which is bash so by exiting we return to bash sre.
+
+There is a docker image that has an os in it, it then uses guacamole to serve the desktop through the browser.
+
+You can probably find it doing a searchince we didn't exit the parent process 
 bin
 - docker container rm id1 id2 id3 or name
 - docker  image rm python fedora  or id 

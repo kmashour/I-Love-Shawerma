@@ -1,4 +1,5 @@
 https://docs.docker.com/
+
 --------------------------section 1------------------------
 ##########################video-1##############################
 
@@ -6,27 +7,26 @@ Linux refers to the kernel not the os
 kernel is between hardware and the os 
 drivers are on the kernel 
 
-microsoft windows os and kernel is one package
+Microsoft windows os and kernel is one package
 
 unix the kernel is package with whatever os depending on the owner company
 
-macos darwin based which is a unix-like system also packaged with os and hardware apple offers a bigger package
+macos darwin based which is a unix-like system also packaged with os and hardware, apple offers a bigger package
 
 #########################video-2###############################
-
 histrionically there where no pc only servers there were only unix 
 
 
- ---------->they need isolation , multi-host environment  
+----------->they need isolation , multi-host environment  
 server ----> chroot(root jail),
 ----------->to distribute system resources
 
-choot is beyond permission its literally isolated each user will have his dedicated file-system replica that can be used by a specific user 
+chroot is beyond permission its literally isolated each user will have his dedicated file-system replica that can be used by a specific user 
 
-ulimit can set limits on server resources but doesnt apply to cpu resources because its shared  
+ulimit can set limits on server resources but doesn't apply to cpu resources because its shared  
 
-nice/renice they are the best cpu resources management 
-40 years old tools boom !!
+nice/renice they are the best cpu resources management but they are not limiters 
+40 year old tools boom !!
 
 1998 ---> vmware
 
@@ -35,13 +35,15 @@ complete isolation , hypervisor made complete isolation between every machine ea
 pc on steroids -------> vm2
 ----------------------> vm2
 
-hardware virtualization   
-
-machine (with installed hyper-visor i.e vmware) 
+hardware virtualization  (bare-metal) 
+machine (with installed hyper-visor i.e vmware ) 
 can host multiple Virtual machine is built on it with complete resource isolation 
 
 os virtualization (chroot)
-Linux/unix in base , they give access to make  isolation spaces for multi-users so each user work is not mixed or corrupted by other users 
+Linux/unix in base , they give access to make  isolated spaces for multi-users so each user work is not mixed or corrupted by other users. 
+if not linux unix it will be as software (vmware) on an already running OS (windows/macos).
+
+
 
 from 2002
 on Linux level
@@ -54,27 +56,65 @@ self contained environment on the kernel level that's why it need someone who kn
 
 That's were dockers emerged 
 this is a boooom ! 
-Docker made the concept of containers accessible to a larger audience, Now we can any application any tool with complete isolation any container will ave its file-system completely de-coupled from the machine they operate on kernel level which made any container portable to any linux kernel whatever the distribution was, any container only sees (it-self) they are allowed certain memory , disk spaces with a cpu resources to run and they accommodate to that, in short they did every thing lxc could provide in term of accessibility 
+Docker made the concept of containers accessible to a larger audience, Now any application or tool can run with complete isolation any container will save its file-system completely 
+decoupled from the machine they operate on kernel level which made any container portable to any linux kernel whatever the distribution was, any container only sees (it-self) from POV of resoucres they are allowed certain memory , disk spaces with a cpu resources to run and they accommodate to that, in short they did every thing lxc could provide in term of accessibility 
 
+so in container we sticked to whats constant which is the kernel and add specification specific to our app 
+`ka2n kda lma el container yenzl 3la os bybda2 yekml 3la elkernel el mawgoda le7ad ama yetl3 lel app ya3ny ka2nana gebna el app bel kernel beta3o we shelna el user mode we el7etat beta3t elkernel elhya sabta 3la kol el linux distro since in general all linux kernels is the same bec`
+linux kernel + specification -> Redhat
+linux kernel + specification -> Ubuntu
+linux kernel + specification -> SUSE
 
-###########################video 3#######################333
-docker client: tool which i interact with 
-docker server: interpret the commands forwarded from the client and handles the cgroups and namespaces the lxc to create the container 
+so **containers** main idea is tailor it self and dependencies on the kernel daemons which is constant across all the os linux versions.
+
+container vs vm --> in term of OS (interview question)
+
+for what purpose do you need do we need a GUI do we need full os capabilities (GUI and terminal) **vm all the way**, because sometimes we need to run a GUI program .
+if we need optimized utilization of resources we use docker all the way.
+
+also containers crashes commonly unlike virtual machines the most important thing is when a containerized applications crash the data is decoupled from the container itself 
+
+###########################video 3############################
+
+docker client: tool which I interact with 
+docker server: interpret the commands forwarded from the client and handles the cgroups and namespaces the lxc to create the container #themoreyoufuckaroundthemoreyouknow Docker architecture refer to [[../../4-References/books/Docker Deep Dive Zero to Docker in a single book (Nigel Poulton) (z-lib.org).pdf|Docker Deep Dive Zero to Docker in a single book (Nigel Poulton) (z-lib.org)]]
 
 
 
 installation guide : 
-docker desktop : lite weight linux vm is installed so the docker engine(docker backend server) could be hosted since docker installed on kernel it communicates with the kernel level so it need the vm and a docker client as an interface to give commands to the docker.
-docker desktop used in windows and Macos the desktop as said will be a lite weight vm that runs the docker engine and the docker client will be on the system
+docker desktop : lite weight linux vm is installed so the docker engine(docker back-end server) could be hosted since docker installed on kernel it communicates with the kernel level so it need the vm and a docker client as an interface to give commands to the docker.
+docker desktop used in windows and Macos the desktop as said will be a lite weight linux vm that runs the docker engine and the docker client will be on the system
 
 if we already have linux as our OS we only just need the engine 
-no need for linux desktop except if we need a layer of isolation if want the docker environment to run as if it is sand-boxed since the docker engine will not run directly on our kernel but on the docker desktop lite weight kernel   
+no need for linux desktop except if we need a layer of isolation if want the docker environment to run as if it is sand-boxed since the docker engine will not run directly on our kernel but on the docker desktop lite weight kernel (which is a lite weight linux virtual machine ) 
 
 
-
---------------------------section 2------------------------
+--------------------------section 2----------------------------
 ##########################video-4##############################
-docker image ---> Consider it as the template for the docker container 
+
+where is docker images stored on a linux machine: 
+The contents of the `/var/lib/docker` directory vary depending on the [driver Docker is using for storage](https://github.com/docker/docker/blob/990a3e30fa66e7bd3df3c78c873c97c5b1310486/daemon/graphdriver/driver.go#L37-L43).
+
+By default this will be `aufs` but can fall back to `overlay`, `overlay2`, `btrfs`, `devicemapper` or `zfs` depending on your kernel support. In most places this will be `aufs` but the [RedHats went with `devicemapper`](http://developerblog.redhat.com/2014/09/30/overview-storage-scalability-docker/).
+
+You can manually set the storage driver with the [`-s` or `--storage-driver=`](https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-storage-driver-option) option to the [Docker daemon](https://docs.docker.com/engine/reference/commandline/dockerd/).
+
+- `/var/lib/docker/{driver-name}` will contain the driver specific storage for contents of the images.
+- `/var/lib/docker/graph/<id>` now only contains metadata about the image, in the `json` and `layersize` files.
+In the case of `aufs`:
+- `/var/lib/docker/aufs/diff/<id>` has the file contents of the images.
+- `/var/lib/docker/repositories-aufs` is a JSON file containing local image information. This can be viewed with the command `docker images`.
+
+In the case of `devicemapper`:
+
+- `/var/lib/docker/devicemapper/devicemapper/data` stores the images
+- `/var/lib/docker/devicemapper/devicemapper/metadata` the metadata
+- Note these files are thin provisioned "sparse" files so aren't as big as they seem.
+
+----
+
+docker image ---> Consider it as the template for the docker container  
+
 
 docker pull busybox -> it contains some commands and diagnostic tools for troubleshooting linux
 
@@ -86,19 +126,25 @@ docker run busybox -> if busybox is not on the system it will automatically pull
 hola bitch !!!  
 
 image has two types 
-predefined to run a certain command on container run command
 
-containers that can run multiple commands they are designed to run as per given input (CLI argument), so the container just not start up (msh hay2om ya3ny)
+1- predefined to run a certain command on container run command
+
+2- containers that can run multiple commands they are designed     to run as per given input (CLI argument), so the container      just start and exit at the same instant if not given a          command (msh hay2om ya3ny)
+
+**the main target of a container is to run only 1 process once the process is terminated the container is considered obsolete its a bundle of packages and dependencies that run together live together terminate together** 
+the container = application 
+exited container = exited application
+container status up = Running container  
 
 docker run busybox echo "hello word"   <- CLI arguments  
 it will execute it then stops !!
 container has more usages this is just a trivial example
 
-docker run busybox ls -l ---> will list the container file-system its like chroot that created a private file-system replica but now it on a container 
+docker run busybox ls -l ---> **will list the container file-system its like chroot that created a private file-system replica but now it on a container** 
 
-container will never continue running as long as the command it executes finish 
+**container will never continue running as long as the command it executes finish** 
 
-RULE--> container lifetime is command run time execution it doesn't matter if the command exists successfully or failed the container will seize to run 
+RULE--> container lifetime is command run time execution it doesn't matter if the command exits successfully or failed the container will seize to run 
 (container lifetime = command runtime)
 
 docker ps ->  list all running container process 
@@ -112,17 +158,63 @@ docker run busybox sleep infinity -> sleeps until its manually terminated
 
 docker run --detach busybox sleep infinity -> detach from my current bash process(entry point bare in mind that ps also shows the entry point command to the container) , detaches from current terminal (-d) 
 
+#tool_Dicovery_NetworkCategory :nc 
+docker exec container_ID nc -zv  google.com 80 (**nc:net-cat** is like Swiss knife of networking , here nc checks if port 80 is open in host google.com), i can use containers that has nc with a little bit older version 
 
-docker exec container ID nc -zv  google.com 80 (nc:net-cat is like Swiss knife of networking , here nc checks if port 80 is open in host google.com), i can use containers that has nc with a little bit older version 
+docker exec -it container ID sh (attach a shell to the container, as long as this shell type is available )
+it-> stands for interactive terminal
 
-docker exec -it container ID sh (attach a shell to the container, as long as the shell type is available )
-it-> stands for interactive terminal ? i think so 
+**docker attach containerID puts the container in foreground**
 
--------------- container operations --------------
+
+docker exec with -i , -it , without
+
+| Option                            | Effect                                                                        |
+| --------------------------------- | ----------------------------------------------------------------------------- |
+| `-d` only                         | Runs in background but may exit immediately if no process is running.         |
+| `-dit`                            | Runs in background with an interactive shell (useful for manual interaction). |
+| `-d` + command (`sleep infinity`) | Keeps the container running indefinitely.                                     |
+| docker exec -it alp1 shell        | to execute a command interactively in a background container                  |
+| docker attach alp1                | to attach to the shell                                                        |
+
+**I would like to start a stopped Docker container with a different command, as the default command crashes - meaning I can't start the container and then use `docker exec` command ?**
+**or a container that Entry Point = Null ???** #Iam_your_mystery
+
+Find your stopped container id
+```
+docker ps -a
+```
+Commit the stopped container:
+This command saves modified container state into a new image named `user/test_image`:
+```
+docker commit $CONTAINER_ID user/test_image
+```
+ Start/run with a different entry point:
+```
+docker run -ti --entrypoint=sh user/test_image
+```
+
+Entry-point argument description:
+https://docs.docker.com/engine/reference/run/#/entrypoint-default-command-to-execute-at-runtime](https://docs.docker.com/engine/reference/run/#/entrypoint-default-command-to-execute-at-runtime)
+Note:
+**Steps above just start a stopped container with the same file-system state. That is great for a quick investigation; but environment variables, network configuration, attached volumes and other stuff is not inherited. You should specify all these arguments explicitly.**
+
+
+
+
+
+
+--------------------- container operations --------------------
+#Docker_best_practice 
+**use containerID because its unique can't be repeated** 
 
 docker stop  ID --> its stopped but not removed its on my system
 
-docker start ID--> start the container directly without needing to detach or pass sleep infinity again 
+docker start ID--> start the container directly without needing to detach or pass sleep infinity again
+
+#Docker_best_practice 
+**Its not recommended to use -f at all we are not carpenter** 
+**when we use -f on a running container it we will kill all running processes within the container unlike stop it will wait for the process to finish an then stops** 
 
 docker stop ID
 ---------------> docker rm -f ID (combines both stop and rm)
@@ -130,36 +222,44 @@ docker rm   ID
 after removing the we will need to us run command if we want the container it is completely removed 
 
 -------------------- operations on image level ------------
+
+#Docker_best_practice 
 good practice remove all non used images because it occupies space
 docker images 
 docker rmi image id 
 
-if container uses an image there will be an error in removing the image 
-we can use -f but its not a good practice since it forcefully remove the image 
+**if container uses an image there will be an error in removing the image, we can use -f but its not a good practice since it forcefully remove the image** 
  
 
 docker containers runs in an instant very very fast unlike a virtual machine a whole os will startup
 
 docker container ---> The running container which is based on a docker image 
 
+**using rmi nginx --> i have two nginx the latest and another old version so by default it will delete the default version bye bye** 
+**--> so we ether use and specify the tag** 
+**--> or use the image ID**
+
+#Docker_best_practice
+best practice in docker image, is to get rid of the tag latest to escape conflicts because somewhere in time what will happen is there will more than one under label latest 
+
 
 
 ##########################video-5##############################
-1st example of docker container was the busy box is that the only use, is our approach only revolves around using a container that has commands which i need to use that's not available to my system ?? 
+1st example of docker container was the busy box is that the only use, is our approach only revolves around using a container that has commands which i need to use that's not available on my system ?? 
 
-to create a server a daemon, web server most used example we want web server just to host a static website an ad or something very very simple  
+we can create a server a daemon, web server most used example we want web server just to host a static website an ad or something very very simple  
 
 I don't want to install the web server on my machine i want to sandbox it to run it in an isolated environment 
 
-nginx is many things but now lets look at it as a web-server 
+**nginx is many things but now lets look at it as a web-server** 
 
 now we will run nginx through a docker container 
 
-docker run -d nginx (p.s unlike busybox is not configured to run any command its a container with a diagnostics and networking tool kit for debugging so the commands are for us to be executed so if no commands were directed to the container it just turn down in nginx container it is configured to run the nginx service so it continue on running upon the container run command)
+**docker run -d nginx** (p.s unlike busybox which is not configured to run any command its a container with a diagnostics and networking tool kit for debugging so the commands are for us to be executed so if no commands were directed to the container it just turn down in nginx container it is configured to run the nginx service so it continue on running upon the container run command)
 
 docker ps --> will list port its listens on 
 
-the nginx container is a web-server so it listens on a port, the problem is that it listens on the port but on the container network internal network created for that container so the pc will not be able to access the web-server because its on a different network
+the nginx container is a web-server so it listens on a port, the problem is that it listens on the port but the container itself is part of internal virtual network created for a docker container so the host machine will not be able to access the web-server because its on a different network
 
 docker run -d -P nginx
 -P -> random port is opened on the host system and is mapped to the container port this is called port mapping or port forwarding (NAT) the traffic now 8080 is dealt with as its the port of the container hence the word mapping or even forwarding it forward the traffic to the container so it could listen to any request from any where (0.0.0.0:8080->80) and reply to the request 0.0.0.0 means any where(any ip)
@@ -173,6 +273,11 @@ host port:container port
 docker run -d -p 8080:80 --name mywebserver nginx 
 
 docker ps
+
+
+*port mapping is done in production is always used as good security practice* 
+*take care not re-map a port by mistake*
+
 
 ##########################video-6##############################
 
@@ -262,6 +367,12 @@ or
 docker volume rm mydata
 docker volume dbdata 
 
+*volumes cant be added while container is running, so go to old school way which is just copying the files from within its original path if a volume is not created* 
+
+Alternative options to copying
+that's how to copy from outside to inside the container 
+- docker container ==cp ./file.py 7e0:/tmp/file.py==
+
 ##########################video-7##############################
 
 volumes -> Anonymous volumes
@@ -304,6 +415,12 @@ sudo ls -l /var/lib/docker/volumes
 ##########################video-7##############################
 bind mount 
 
+When you use a bind mount, a file or directory on the host machine is mounted from the host into a container. By contrast, when you use a volume, a new directory is created within Docker's storage directory on the host machine, and Docker manages that directory's contents.
+
+If you bind mount file or directory into a directory in the container in which files or directories exist, the pre-existing files are obscured by the mount.if the volume mounted and contains data on the host (the host volume is always checked when we mount a volume). it will be obscured by the data in that directory but not vice versa ....
+This is similar to if you were to save files into `/mnt` on a Linux host, and then mounted a USB drive into `/mnt`. The contents of `/mnt` would be obscured by the contents of the USB drive until the USB drive was unmounted.
+**With containers, there's no straightforward way of removing a mount to reveal the obscured files again. Your best option is to recreate the container without the mount**.
+
 docker run --name static-site -v \<path-of-directory-to-bind\>
 
 docker run --name static-site -v $(pwd):/usr/share/nginx/html:ro -p 8080:80 -d nginx 
@@ -317,12 +434,9 @@ mywebdata --> volume will be created automatically
 -P --> will automatically open a port on my host pc
 
 bind mount and volume how are they different 
---->
---->
---->
---->
---->
---->
+--->If you bind mount file or directory into a directory in the 
+container in which files or directories exist, the pre-existing 
+files are obscured by the mount, unlike in named volumes it create some sort of open door from the container to the volume is nothing is obscured (فتحوا القطرين علي بعض )  
 
 
 
@@ -497,7 +611,10 @@ cache cleans
 **EXPOSE 3000**  --> just an indication that the app listens on port 3000 but this line doesn't mean that we exposed that port 
 so if i wanted to expose the app it will be through mapping port 3000 to an port on the host pc
 
-**docker build** **-t getting-started .**--> expect a file named Dockerfile with the same case's(capitalization) in the current working directory , if it has another name we use **-f** , **-t** is the tag and the **.** means the docker file is in current working directory this is where i will build 
+*we use one to three version behind when using a base image i want to be in the area where i didn't lose my support and having my stable version ---> when upgrading to a new version i always refer to the release note* 
+
+
+**docker build** **-t getting-started:v1 .**--> expect a file named Dockerfile with the same case's(capitalization) in the current working directory , if it has another name we use **-f** , **-t** is the tag and the **.** means the docker file is in current working directory this is where i will build (some distros require the docker file name explicitly even if its the default name)
 
 docker image ls 
 docker run -d -p 3000:3000 getting-started
@@ -613,7 +730,9 @@ getting-started-app on docker github repo we need to fork it and clone the repo 
 1- getting-started-app -> direct.
 2- .github/workflows -> sub-directory. this is how github understands that i want to create a pipeline workflow its a must !! for github to understand that i want a pipeline to automate or execute commands on it
 3- create a yml file under the workflows 
-![[../7-References/Code/CICD pipeline/Docker+CI.html]]
+
+![[../../Attachments/Docker+CI.html]]
+
 ```HTML
 Go to [https://github.com/docker/getting-started-app](https://github.com/docker/getting-started-app)
 
@@ -743,7 +862,7 @@ vim docker-compose.yml --> default name use by docker compose
 docker compose will deal with the container as a service .. 
 
 
-![[../../4-References/Code/docker-compose/Docker+compose.html]]
+![[../../4-References/Code/Elfakhrany-Docker/docker-compose/Docker+compose.html]]
 
 ```html
 Clone the weather app from GitLab:

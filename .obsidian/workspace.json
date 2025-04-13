@@ -4,21 +4,103 @@
     "type": "split",
     "children": [
       {
-        "id": "39b39798cea61b9e",
+        "id": "93eac5459ae77ee2",
         "type": "tabs",
         "children": [
           {
-            "id": "c6eb488f4956a5ed",
+            "id": "e213e4bcd68cb27c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "2-Inbox/Courses-inflows/Dockers 9-4-2025.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
               "title": "Dockers 9-4-2025"
+            }
+          },
+          {
+            "id": "406c63d296a2f29a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Rough-Notes/->Docker<-.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "->Docker<-"
+            }
+          },
+          {
+            "id": "8581d8ac5f5f16e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Rough-Notes/Dockers commands.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dockers commands"
+            }
+          },
+          {
+            "id": "0138b341c2eb65e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Rough-Notes/Dockers.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dockers"
             }
           }
         ]
@@ -94,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/Dockers commands.md",
+                "file": "2-Inbox/Courses-inflows/Dockers 9-4-2025.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dockers commands"
+              "title": "Backlinks for Dockers 9-4-2025"
             }
           },
           {
@@ -113,12 +195,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DevOps/Dockers commands.md",
+                "file": "2-Inbox/Courses-inflows/Dockers 9-4-2025.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Dockers commands"
+              "title": "Outgoing links from Dockers 9-4-2025"
             }
           },
           {
@@ -157,12 +239,12 @@
             "state": {
               "type": "smart-gantt",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "egg",
+              "title": "Smart Gantt"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -182,51 +264,50 @@
   },
   "active": "f618071915155f0c",
   "lastOpenFiles": [
-    "phone_sync.shell~",
-    "phone_sync.shell",
-    "2-Inbox/Courses-inflows",
+    "1-Rough-Notes/Dockers commands.md",
+    "1-Rough-Notes/->Docker<-.md",
+    "2-Inbox/Courses-inflows/Dockers 9-4-2025.md",
+    "1-Rough-Notes/Dockers.md",
+    "3-Attachments/Screenshot from 2025-04-13 00-38-19.png",
+    "3-Attachments/Screenshot from 2025-04-13 00-37-38.png",
+    "3-Attachments/Docker+CI.html",
+    "3-Attachments",
+    "4-Attachments/Screenshot from 2025-04-13 00-38-19.png",
+    "4-Attachments/Screenshot from 2025-04-13 00-37-38.png",
+    "4-Attachments/Docker+CI.html",
+    "4-Attachments",
+    "4-References/books/Docker Deep Dive Zero to Docker in a single book (Nigel Poulton) (z-lib.org).pdf",
+    "1-Rough-Notes/shell initialization.md",
+    "1-Rough-Notes/bash scripting.md",
+    "1-Rough-Notes/Bash Manual page Reviewing.md",
+    "1-Rough-Notes/->Linux<-.md",
+    "4-References/Code/Elfakhrany-Docker",
+    "4-References/Code/Elfakhrany-Docker/static-website/page2.html",
+    "4-References/Code/Elfakhrany-Docker/static-website/page1.html",
+    "4-References/Code/Elfakhrany-Docker/static-website/index.html",
+    "4-References/Code/Elfakhrany-Docker/docker-compose/Docker+compose.html",
+    "6-Attachments/Pasted image 20250222125845.png.md",
+    "1-Rough-Notes/Man and info page.md",
+    "1-Rough-Notes/ls command.md",
+    "1-Rough-Notes/identifying errors.md",
+    "1-Rough-Notes/identifying error.md",
+    "Books/GitHub.pdf.md",
+    "1-Rough-Notes/->GIT<-.md",
+    "1-Rough-Notes/less command.md",
+    "1-Rough-Notes/copy cp command.md",
+    "1-Rough-Notes/Links.md",
+    "1-Rough-Notes/remove file and directories rm.md",
+    "1-Rough-Notes/Basic Command For Linux Terminal.md",
+    "1-Rough-Notes/wildcards.md",
+    "1-Rough-Notes/The Linux Filesystem.md",
     "Attachments/Screenshot from 2025-04-13 00-38-19.png",
     "Attachments/Screenshot from 2025-04-13 00-37-38.png",
-    "Attachments",
     "1-Rough-Notes/->Agile fundamentals<-.md",
-    "2-Inbox/Courses-inflows/Dockers 9-4-2025.md",
-    "1-Rough-Notes/->Linux<-.md",
     "1-Rough-Notes/Notes on packet mangement.md",
-    "4-References/Code/docker-compose/Docker+compose.html",
-    "4-References/Code/docker-compose",
-    "4-References/Code/Docker+compose.html",
-    "4-References/books/The Linux Command Line_ A Complete Introduction ( PDFDrive ).pdf",
-    "4-References/Code/static-website/page2.html",
-    "4-References/Code/static-website/page1.html",
-    "4-References/Code/static-website/index.html",
     "x-FastAccessKnowledgeHub/Where to go for software engineers.md",
     "6-Attachments/Screenshot from 2025-03-04 10-45-46.png",
     "6-Attachments/Screenshot from 2025-03-04 10-45-46 4.png",
     "6-Attachments/Screenshot from 2025-03-04 10-45-46 3.png",
-    "6-Attachments/Screenshot from 2025-03-04 10-45-46 2.png",
-    "6-Attachments/Screenshot from 2025-03-04 10-45-46 1.png",
-    "6-Attachments/Screenshot from 2025-02-22 13-33-38.png",
-    "6-Attachments/Screenshot from 2025-02-22 13-33-38 1.png",
-    "6-Attachments/Screenshot from 2025-02-22 10-50-24.png",
-    "1-Rough-Notes/Dockers.md",
-    "1-Rough-Notes/->Docker<-.md",
-    "1-Rough-Notes/Bash Manual page Reviewing.md",
-    "1-Rough-Notes/bash scripting.md",
-    "1-Rough-Notes/Dockers commands.md",
-    "1-Rough-Notes/->GIT<-.md",
-    "2-Inbox/Untitled.md",
-    "Inbox.md",
-    "->Python<-.md",
-    "Branching.md",
-    "->GIT<-.md",
-    "The Linux Filesystem.md",
-    "->Linux<-.md",
-    "->Docker<-.md",
-    "Basic Command For Linux Terminal.md",
-    "Links.md",
-    "->Agile fundamentals<-.md",
-    "hashing.md",
-    "python data structures.md",
-    "Dictionaries.md"
+    "6-Attachments/Screenshot from 2025-03-04 10-45-46 2.png"
   ]
 }

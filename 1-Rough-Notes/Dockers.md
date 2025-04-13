@@ -58,9 +58,8 @@ my problem here it the various OS version on multiple VHW offered from the hyper
 
 os is -> kernel +++ user mode(GUI) fuck it i dont need it & kernel mode (el7ta elsoda elfel awl) i need it very important 
 
-so **containers** main idea is tailor it self and dependencies on the kernel daemons which is constant across all the os versions in all VMs in that way we shared the kernel across multiple apps so the configuration and licenses is done 1 time 
 
-that's applied by Virtual machine concept  which is 
+so **containers** main idea is tailor it self and dependencies on the kernel daemons which is constant across all the os versions in all VMs in that way we shared the kernel across multiple apps so the configuration and licenses is done 1 time that's applied by Virtual machine concept  which is 
 
 base disks :
 
